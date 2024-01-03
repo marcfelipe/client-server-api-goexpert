@@ -70,7 +70,7 @@ func CotacaoHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func BuscaoCotacao() (*ApiResponse, error) {
-	ctx, cancel := context.WithTimeout(context.Background(), time.Millisecond*200)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Millisecond*2000)
 	req, err := http.NewRequestWithContext(ctx, "GET", "https://economia.awesomeapi.com.br/json/last/USD-BRL", nil)
 	if err != nil {
 		panic(err)
